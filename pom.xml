@@ -3,12 +3,12 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>javaee-cafe</artifactId>
-	<groupId>javaee-cafe</groupId>
+	<artifactId>azure-cafe</artifactId>
+	<groupId>azure-cafe</groupId>
 	<version>0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>${project.artifactId}</name>
-	<description>This is the basic Java EE application used throughout the Azure demos.
+	<description>This is the basic Java EE application used throughout the Azure demo.
         It is a simple CRUD application. It uses Maven and Java EE 8 (JAX-RS, EJB, CDI, JPA, JSON-B, JSF, Bean Validation).
     </description>
 	<properties>
