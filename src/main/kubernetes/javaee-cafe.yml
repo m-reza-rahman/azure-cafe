@@ -1,28 +1,28 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: javaee-cafe
+  name: azure-cafe
   namespace: default
 spec:
   replicas: 2
   template:
     metadata:
-      name: javaee-cafe
+      name: azure-cafe
       labels:
-        app: javaee-cafe
+        app: azure-cafe
     spec:
       containers:
-      - name: javaee-cafe
-        image: <your Docker Hub ID>/javaee-cafe:v1
+      - name: azure-cafe
+        image: <your Docker Hub ID>/azure-cafe:v1
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: javaee-cafe
+  name: azure-cafe
 spec:
   type: LoadBalancer
   ports:
     - port: 80
       targetPort: 8080
   selector:
-    app: javaee-cafe
+    app: azure-cafe
