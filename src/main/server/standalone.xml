@@ -157,11 +157,11 @@
                         <password>sa</password>
                     </security>
                 </datasource>
-                <datasource jndi-name="java:/jdbc/JavaEECafeDB" pool-name="PostgresDS" enabled="true" use-java-context="true">
-                    <connection-property name="url">jdbc:postgresql://javaee-cafe-db.postgres.database.azure.com:5432/postgres</connection-property>
+                <datasource jndi-name="java:/jdbc/AzureCafeDB" pool-name="PostgresDS" enabled="true" use-java-context="true">
+                    <connection-property name="url">jdbc:postgresql://azure-cafe-db.postgres.database.azure.com:5432/postgres</connection-property>
                     <driver>postgres</driver>
                     <security>
-                        <user-name>postgres@javaee-cafe-db</user-name>
+                        <user-name>postgres@azure-cafe-db</user-name>
                         <password>Secret123!</password>
                     </security>
                 </datasource>
