@@ -1,5 +1,5 @@
-# Deploying a Java EE application on Azure using Docker and Kubernetes
-This demo shows how you can deploy a Java EE application to Azure using Docker and Kubernetes. The following is how you run the demo.
+# Azure Cafe
+This is an end-to-end Azure demo using a Java EE application and various representative Azure services such as managed PostgreSQL and AKS (Azure Kubernetes Service). The following is how you run the demo.
 
 ## Setup
 * You will need an Azure subscription. If you don't have one, you can get one for free for one year [here](https://azure.microsoft.com/en-us/free).
