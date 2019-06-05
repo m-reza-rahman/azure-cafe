@@ -31,6 +31,6 @@ steps:
   inputs:
     connectionType: 'Kubernetes Service Connection'
     kubernetesServiceEndpoint: 'aks-cluster-reza'
-    command: 
+    command: 'create'
     useConfigurationFile: true
     configuration: '**/azure-cafe.yml'
