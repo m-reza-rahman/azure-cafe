@@ -34,5 +34,3 @@ steps:
     command: 
     useConfigurationFile: true
     configuration: '**/azure-cafe.yml'
-    secretType: 'dockerRegistry'
-    containerRegistryType: 'Azure Container Registry'
