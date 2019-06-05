@@ -27,3 +27,12 @@ steps:
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
     tags: 'v1'
+- task: Kubernetes@1
+  inputs:
+    connectionType: 'Kubernetes Service Connection'
+    kubernetesServiceEndpoint: 'aks-cluster-reza'
+    command: 
+    useConfigurationFile: true
+    configuration: '**/azure-cafe.yml'
+    secretType: 'dockerRegistry'
+    containerRegistryType: 'Azure Container Registry'
