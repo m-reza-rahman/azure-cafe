@@ -31,8 +31,7 @@ Once you are done exploring the demo, you should delete the azure-cafe-group res
 ## Deploy the Java EE Application on Kubernetes
 * Open Eclipse.
 * Do a full build of the azure-cafe application via Maven by going to Right click the application -> Run As -> Maven install.
-* Browse to where you have this repository code in your file system. You will now need to copy the war file to where we will build the Docker image next. You will find the war file under /target. Copy the war file to /kubernetes.
-* Open a terminal. Navigate to where you have this repository code in your file system. Navigate to the /kubernetes directory.
+* Open a terminal. Navigate to where you have this repository code in your file system.
 * Log in to Docker Hub using the docker login command:
 
    ```
@@ -44,6 +43,7 @@ Once you are done exploring the demo, you should delete the azure-cafe-group res
    docker build -t <your Docker Hub ID>/azure-cafe:v1 .
    docker push <your Docker Hub ID>/azure-cafe:v1
    ```
+* Navigate to the /kubernetes directory.
 * Replace the `<your Docker Hub ID>` value with your account name in `azure-cafe.yml` file.
 * You can now deploy the application:
 
