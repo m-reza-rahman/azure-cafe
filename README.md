@@ -43,7 +43,6 @@ Once you are done exploring the demo, you should delete the azure-cafe-group res
    docker build -t <your Docker Hub ID>/azure-cafe:v1 .
    docker push <your Docker Hub ID>/azure-cafe:v1
    ```
-* Navigate to the /kubernetes directory.
 * Replace the `<your Docker Hub ID>` value with your account name in `azure-cafe.yml` file.
 * You can now deploy the application:
 
