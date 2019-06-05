@@ -23,6 +23,6 @@ steps:
 - task: Docker@2
   inputs:
     containerRegistry: 'docker-hub-rezarahman'
-    repository: 'azure-cafe'
+    repository: 'rezarahman/azure-cafe'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
