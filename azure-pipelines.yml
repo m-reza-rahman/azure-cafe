@@ -26,3 +26,4 @@ steps:
     repository: 'rezarahman/azure-cafe'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
+    tags: 'v1'
