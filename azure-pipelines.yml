@@ -22,17 +22,3 @@ steps:
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
     tags: 'v1'
-- task: Kubernetes@1
-  inputs:
-    connectionType: 'Kubernetes Service Connection'
-    kubernetesServiceEndpoint: 'aks-cluster-reza'
-    command: 'delete'
-    useConfigurationFile: true
-    configuration: 'azure-cafe.yml'
-- task: Kubernetes@2
-  inputs:
-    connectionType: 'Kubernetes Service Connection'
-    kubernetesServiceEndpoint: 'aks-cluster-reza'
-    command: 'create'
-    useConfigurationFile: true
-    configuration: 'azure-cafe.yml'
