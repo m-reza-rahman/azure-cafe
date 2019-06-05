@@ -15,7 +15,7 @@ steps:
     publishJUnitResults: false
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
-- task: Docker@1
+- task: Docker@3
   inputs:
     containerRegistry: 'docker-hub-rezarahman'
     repository: 'rezarahman/azure-cafe'
