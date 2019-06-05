@@ -33,4 +33,4 @@ steps:
     kubernetesServiceEndpoint: 'aks-cluster-reza'
     command: 'create'
     useConfigurationFile: true
-    configuration: '**/azure-cafe.yml'
+    configuration: 'azure-cafe.yml'
