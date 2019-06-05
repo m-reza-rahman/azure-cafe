@@ -29,4 +29,10 @@ steps:
     command: 'delete'
     useConfigurationFile: true
     configuration: 'azure-cafe.yml'
-
+- task: Kubernetes@1
+  inputs:
+    connectionType: 'Kubernetes Service Connection'
+    kubernetesServiceEndpoint: 'aks-cluster-reza'
+    command: 'create'
+    useConfigurationFile: true
+    configuration: 'azure-cafe.yml'
