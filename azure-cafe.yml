@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: azure-cafe
-        image: <your Docker Hub ID>/azure-cafe:v1
+        image: rezarahman/azure-cafe:v1
 ---
 apiVersion: v1
 kind: Service
