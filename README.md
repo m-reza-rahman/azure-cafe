@@ -31,6 +31,13 @@ Once you are done exploring the demo, you should delete the azure-cafe-group res
   If you get an error about an already existing resource, you may need to delete the ~/.kube directory.
 * You need to have docker cli installed and you must be signed into your Docker Hub account. To create a Docker Hub account go to [https://hub.docker.com](https://hub.docker.com).
 
+## Create Service Connections
+* Clone this repository into your own GitHub account. Make sure to update the [azure-cafe.yml](azure-cafe.yml) file to replace occurrences of `rezarahman` with `<Your Docker Hub ID>` on GitHub.
+* Go to [Azure DevOps home](https://dev.azure.com).
+* Select your project. Click on project settings -> Pipelines -> Service connections -> New service connection -> GitHub. Provide a connection name. Click authorize. Click OK.
+* Select New service connection -> Docker Registry. Select Docker Hub as your registry type. Specify the connection name to be docker-hub-`<Your Docker Hub ID>`. Fill in your Docker ID, password and email. Click OK. 
+* Select New service connection -> Kubernetes. Select Azure subscription as your authentication. Specify the connection name to be azure-cafe-cluster. Select the cluster to be azure-cafe-cluster. Click OK.
+
 ## Deploy the Java EE Application on Kubernetes
 * Open Eclipse.
 * Do a full build of the azure-cafe application via Maven by going to Right click the application -> Run As -> Maven install.
