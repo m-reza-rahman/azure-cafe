@@ -2,7 +2,10 @@
 This is an end-to-end Azure demo using a Java EE application and various representative Azure services such as managed PostgreSQL, AKS (Azure Kubernetes Service) and Azure DevOps Pipelines. The following is how you run the demo.
 
 ## Setup
+* You will need a GitHub account.
 * You will need an Azure subscription. If you don't have one, you can get one for free for one year [here](https://azure.microsoft.com/en-us/free).
+* You need to have a [Docker Hub](https://hub.docker.com) account.
+* You need to have an Azure DevOps Project. You can sign up for Azure DevOps for free [here](https://azure.microsoft.com/en-us/services/devops/). [Here](https://docs.microsoft.com/en-us/azure/devops/organizations/projects/create-project) are instructions on how to set up an Azure DevOps Project. Make sure you choose Git for source control.
 
 ## Start Managed PostgreSQL on Azure
 We will be using the fully managed PostgreSQL offering in Azure for this demo. If you have not set it up yet, please do so now. 
