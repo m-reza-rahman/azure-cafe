@@ -38,35 +38,13 @@ Once you are done exploring the demo, you should delete the azure-cafe-group res
 * Select New service connection -> Docker Registry. Select Docker Hub as your registry type. Specify the connection name to be docker-hub-`<Your Docker Hub ID>`. Fill in your Docker ID, password and email. Click OK. 
 * Select New service connection -> Kubernetes. Select Azure subscription as your authentication. Specify the connection name to be azure-cafe-cluster. Select the cluster to be azure-cafe-cluster. Click OK.
 
-## Deploy the Java EE Application on Kubernetes
-* Open Eclipse.
-* Do a full build of the azure-cafe application via Maven by going to Right click the application -> Run As -> Maven install.
-* Open a terminal. Navigate to where you have this repository code in your file system.
-* Log in to Docker Hub using the docker login command:
+## Create and Run the Pipeline
+* Select pipelines. Click new -> new build pipeline. Select GitHub as source control. Select azure-cafe from your own repository. Select existing Azure Pipelines YAML file. Select azure-pipelines.yml as the path.
 
-   ```
-   docker login
-   ```
-* Build a Docker image and push the image to Docker Hub:
-
-   ```
-   docker build -t <your Docker Hub ID>/azure-cafe:v1 .
-   docker push <your Docker Hub ID>/azure-cafe:v1
-   ```
-* Replace the `<your Docker Hub ID>` value with your account name in `azure-cafe.yml` file.
-* You can now deploy the application:
-
-   ```
-   kubectl create -f azure-cafe.yml
-   ```
+* In the YAML file, replace occurrences of `rezarahman` with `<Your Docker Hub ID>`. When done, hit save and hit run.
+* When the job finishes running, the application will be deployed to Kubernetes.
 * Get the External IP address of the Service, then the application will be accessible at `http://<External IP Address>/azure-cafe`:
    ```
    kubectl get svc azure-cafe --watch
    ```
   It may take a few minutes for the load balancer to be created. When the external IP changes over from *pending* to a valid IP, just hit Control-C to exit.
-
-## Deleting the Resources
-* Delete the application deployment:
-   ```
-   kubectl delete -f azure-cafe.yml
-   ```
