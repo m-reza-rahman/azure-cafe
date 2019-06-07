@@ -22,6 +22,7 @@ steps:
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
 - task: Kubernetes@1
+  continueOnError: true
   inputs:
     connectionType: 'Kubernetes Service Connection'
     kubernetesServiceEndpoint: 'azure-cafe-cluster'
