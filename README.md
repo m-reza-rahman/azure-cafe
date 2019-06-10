@@ -51,7 +51,7 @@ Once you are done exploring the demo, you should delete the azure-cafe-group res
 
 ## To Do
 * Logging
-* Caching
-* Security
+* Active Directory
+* Redis
 * Key Vault/Configuration
-* JMS
+* Service Bus
