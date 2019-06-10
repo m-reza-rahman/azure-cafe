@@ -48,3 +48,10 @@ Once you are done exploring the demo, you should delete the azure-cafe-group res
    kubectl get svc azure-cafe --watch
    ```
   It may take a few minutes for the load balancer to be created. When the external IP changes over from *pending* to a valid IP, just hit Control-C to exit.
+
+## To Do
+* Logging
+* Caching
+* Security
+* Key Vault/Configuration
+* JMS
