@@ -50,7 +50,7 @@ Once you are done exploring the demo, you should delete the azure-cafe-group res
   It may take a few minutes for the load balancer to be created. When the external IP changes over from *pending* to a valid IP, just hit Control-C to exit.
 
 ## To Do
-* Logging
+* Application Insights
 * Active Directory
 * Redis
 * Key Vault/Configuration
