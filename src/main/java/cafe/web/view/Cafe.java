@@ -5,7 +5,6 @@ import java.lang.invoke.MethodHandles;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.List;
-import java.util.logging.Logger;
 
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.SessionScoped;
@@ -21,6 +20,9 @@ import javax.ws.rs.client.Entity;
 import javax.ws.rs.core.GenericType;
 import javax.ws.rs.core.MediaType;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import cafe.model.entity.Coffee;
 
 @Named
@@ -28,7 +30,7 @@ import cafe.model.entity.Coffee;
 public class Cafe implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	private static final Logger logger = Logger.getLogger(MethodHandles.lookup().lookupClass().getName());
+	private static final Logger logger = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
 
 	private String baseUri;
 	private transient Client client;
@@ -74,7 +76,7 @@ public class Cafe implements Serializable {
 			this.client = ClientBuilder.newClient();
 			this.getAllCoffees();
 		} catch (IllegalArgumentException | NullPointerException | WebApplicationException | UnknownHostException ex) {
-			logger.severe("Processing of HTTP response failed.");
+			logger.error("Processing of HTTP response failed.");
 			ex.printStackTrace();
 		}
 	}
