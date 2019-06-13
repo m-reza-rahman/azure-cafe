@@ -35,8 +35,10 @@ steps:
   inputs:
     connectionType: 'Kubernetes Service Connection'
     kubernetesServiceEndpoint: 'azure-cafe-cluster'
-    command: 'delete'
+    command: 'apply'
+    forceUpdateConfigMap: true
     configMapName: 'application-insights-key'
+    configMapArguments: '--from-literal=APPLICATION_INSIGHTS_KEY=28d0a5cf-cf10-4d51-810f-432c028be97f'
 - task: Kubernetes@1
   inputs:
     connectionType: 'Kubernetes Service Connection'
