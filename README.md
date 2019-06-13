@@ -37,7 +37,6 @@ Once you are done exploring the demo, you should delete the azure-cafe-group res
 
 ## Create Service Connections
 * Clone this repository into your own GitHub account. Make sure to update the [azure-cafe.yml](azure-cafe.yml) file to replace occurrences of `rezarahman` with `<Your Docker Hub ID>` on GitHub.
-* Make sure to update the [azure-pipelines.yml](azure-pipelines.yml) file to replace occurrences of `<Your Application Insights key>` with the instrumentation key you noted earlier.
 * Go to [Azure DevOps home](https://dev.azure.com).
 * Select your project. Click on project settings -> Pipelines -> Service connections -> New service connection -> GitHub. Provide a connection name. Click authorize. Click OK.
 * Select New service connection -> Docker Registry. Select Docker Hub as your registry type. Specify the connection name to be docker-hub-`<Your Docker Hub ID>`. Fill in your Docker ID, password and email. Click OK. 
@@ -46,7 +45,7 @@ Once you are done exploring the demo, you should delete the azure-cafe-group res
 ## Create and Run the Pipeline
 * Select pipelines. Click new -> new build pipeline. Select GitHub as source control. Select azure-cafe from your own repository. Select existing Azure Pipelines YAML file. Select azure-pipelines.yml as the path.
 
-* In the YAML file, replace occurrences of `rezarahman` with `<Your Docker Hub ID>`. When done, hit save and hit run.
+* In the YAML file, replace occurrences of `rezarahman` with `<Your Docker Hub ID>`. Replace occurrences of `<Your Application Insights key>` with the instrumentation key you noted earlier. When done, hit save and hit run.
 * When the job finishes running, the application will be deployed to Kubernetes.
 * Get the External IP address of the Service, then the application will be accessible at `http://<External IP Address>/azure-cafe`:
    ```
@@ -56,7 +55,6 @@ Once you are done exploring the demo, you should delete the azure-cafe-group res
 
 ## To Do
 Integrate:
-* Application Insights
 * Active Directory
 * Redis
 * Key Vault/Configuration
