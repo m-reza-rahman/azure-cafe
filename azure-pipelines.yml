@@ -31,6 +31,13 @@ steps:
     useConfigurationFile: true
     configuration: 'azure-cafe.yml'
 - task: Kubernetes@1
+  continueOnError: true
+  inputs:
+    connectionType: 'Kubernetes Service Connection'
+    kubernetesServiceEndpoint: 'azure-cafe-cluster'
+    command: 'delete'
+    configMapName: 'application-insights-key'
+- task: Kubernetes@1
   inputs:
     connectionType: 'Kubernetes Service Connection'
     kubernetesServiceEndpoint: 'azure-cafe-cluster'
