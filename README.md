@@ -1,5 +1,5 @@
 # Azure Cafe
-This is an end-to-end Azure demo using a Java EE application and various representative Azure services such as managed PostgreSQL, AKS (Azure Kubernetes Service) and Azure DevOps Pipelines. The following is how you run the demo.
+This is an end-to-end Azure demo using a Java EE application and various representative Azure services such as managed PostgreSQL, AKS (Azure Kubernetes Service), Azure DevOps Pipelines and Application Insights. The following is how you run the demo.
 
 ## Setup
 * You will need a GitHub account.
