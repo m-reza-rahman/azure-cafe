@@ -31,6 +31,9 @@ Once you are done exploring the demo, you should delete the azure-cafe-group res
   If you get an error about an already existing resource, you may need to delete the ~/.kube directory.
 * You need to have docker cli installed and you must be signed into your Docker Hub account. To create a Docker Hub account go to [https://hub.docker.com](https://hub.docker.com).
 
+## Setup Application Insights
+* You will now setup Application Insights for consolidated logging (you could easily use ELK or Splunk for the same purpose). Go to the [Azure portal](http://portal.azure.com). Hit Create a resource -> DevOps -> Application Insights. Select the resource group to be azure-cafe-group. Specify the name as azure-cafe-insights. Hit Review + create. Hit Create.
+
 ## Create Service Connections
 * Clone this repository into your own GitHub account. Make sure to update the [azure-cafe.yml](azure-cafe.yml) file to replace occurrences of `rezarahman` with `<Your Docker Hub ID>` on GitHub.
 * Go to [Azure DevOps home](https://dev.azure.com).
