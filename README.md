@@ -26,7 +26,7 @@ Once you are done exploring the demo, you should delete the azure-cafe-group-`<y
 * You will then connect kubectl to the Kubernetes cluster you created. To do so, run the following command:
 
    ```
-   az aks get-credentials --resource-group azure-cafe-group-`<your suffix>` --name azure-cafe-cluster-`<your suffix>`
+   az aks get-credentials --resource-group azure-cafe-group-<your suffix> --name azure-cafe-cluster-<your suffix>
    ```
   If you get an error about an already existing resource, you may need to delete the ~/.kube directory.
 * You need to have Docker CLI installed and you must be signed into your Docker Hub account. To create a Docker Hub account go to [https://hub.docker.com](https://hub.docker.com).
