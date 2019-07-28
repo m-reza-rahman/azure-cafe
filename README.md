@@ -8,14 +8,14 @@ This is an end-to-end Azure demo using a Java EE application and various represe
 * You need to have an Azure DevOps Project. You can sign up for Azure DevOps for free [here](https://azure.microsoft.com/en-us/services/devops/). [Here](https://docs.microsoft.com/en-us/azure/devops/organizations/projects/create-project) are instructions on how to set up an Azure DevOps Project. Make sure you choose Git for source control.
 
 ## Start Managed PostgreSQL on Azure
-We will be using the fully managed PostgreSQL offering in Azure for this demo. If you have not set it up yet, please do so now. 
+We will be using the fully managed PostgreSQL offering in Azure for this demo. If you have not set it up yet, please do so now.
 
 * Go to the [Azure portal](http://portal.azure.com).
 * Select Create a resource -> Databases -> Azure Database for PostgreSQL. Select a single server.
-* Specify the Server name to be azure-cafe-db. Create a new resource group named azure-cafe-group. Specify the login name to be postgres. Specify the password to be Secret123!. Hit 'Create'. It will take a moment for the database to deploy and be ready for use.
-* In the portal, go to 'All resources'. Find and click on azure-cafe-db. Open the connection security panel. Enable access to Azure services, disable SSL connection enforcement and then hit Save.
+* Specify the Server name to be azure-cafe-db-`<your suffix>` (the suffix could be your first name such as "reza"). Create a new resource group named azure-cafe-group-`<your suffix>` (the suffix could be your first name such as "reza"). Specify the login name to be postgres. Specify the password to be Secret123!. Hit 'Create'. It will take a moment for the database to deploy and be ready for use.
+* In the portal, go to 'All resources'. Find and click on azure-cafe-db-`<your suffix>`. Open the connection security panel. Enable access to Azure services, disable SSL connection enforcement and then hit Save.
 
-Once you are done exploring the demo, you should delete the azure-cafe-group resource group. You can do this by going to the portal, going to resource groups, finding and clicking on azure-cafe-group and hitting delete. This is especially important if you are not using a free subscription! If you do keep these resources around (for example to begin your own prototype), you should in the least use your own passwords and make the corresponding changes in the demo code.
+Once you are done exploring the demo, you should delete the azure-cafe-group-`<your suffix>` resource group. You can do this by going to the portal, going to resource groups, finding and clicking on azure-cafe-group-`<your suffix>` and hitting delete. This is especially important if you are not using a free subscription! If you do keep these resources around (for example to begin your own prototype), you should in the least use your own passwords and make the corresponding changes in the demo code.
 
 ## Setup the Kubernetes Cluster
 * You will first need to create the Kubernetes cluster. Go to the [Azure portal](http://portal.azure.com). Hit Create a resource -> Containers -> Kubernetes Service. Select the resource group to be azure-cafe-group. Specify the cluster name as azure-cafe-cluster. Hit Review + create. Hit Create.
