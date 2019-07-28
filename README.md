@@ -32,8 +32,8 @@ Once you are done exploring the demo, you should delete the azure-cafe-group-`<y
 * You need to have Docker CLI installed and you must be signed into your Docker Hub account. To create a Docker Hub account go to [https://hub.docker.com](https://hub.docker.com).
 
 ## Setup Application Insights
-* You will now setup Application Insights for consolidated logging (you could easily use ELK or Splunk for the same purpose). Go to the [Azure portal](http://portal.azure.com). Hit Create a resource -> DevOps -> Application Insights. Select the resource group to be azure-cafe-group. Specify the name as azure-cafe-insights. Hit Review + create. Hit Create.
-* In the portal, go to 'All resources'. Find and click on azure-cafe-insights. In the overview panel, note down the instrumentation key.
+* You will now setup Application Insights for consolidated logging (you could easily use ELK or Splunk for the same purpose). Go to the [Azure portal](http://portal.azure.com). Hit Create a resource -> DevOps -> Application Insights. Select the resource group to be azure-cafe-group-`<your suffix>`. Specify the name as azure-cafe-insights-`<your suffix>` (the suffix could be your first name such as "reza"). Hit Review + create. Hit Create.
+* In the portal, go to 'All resources'. Find and click on azure-cafe-insights-`<your suffix>`. In the overview panel, note down the instrumentation key.
 
 ## Create Service Connections
 * Clone this repository into your own GitHub account. Make sure to update the [azure-cafe.yml](azure-cafe.yml) file to replace occurrences of `rezarahman` with `<Your Docker Hub ID>` on GitHub.
