@@ -39,4 +39,4 @@ steps:
     configuration: 'azure-cafe.yml'
     forceUpdateConfigMap: true
     configMapName: 'application-insights-key'
-    configMapArguments: '--from-literal=APPLICATION_INSIGHTS_KEY=c2d27c51-10e2-4226-9d38-7bac9af4f4a6'
+    configMapArguments: '--from-literal=APPLICATION_INSIGHTS_KEY=<Your Application Insights key>'
