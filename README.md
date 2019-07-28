@@ -29,7 +29,7 @@ Once you are done exploring the demo, you should delete the azure-cafe-group res
    az aks get-credentials --resource-group azure-cafe-group --name azure-cafe-cluster
    ```
   If you get an error about an already existing resource, you may need to delete the ~/.kube directory.
-* You need to have docker cli installed and you must be signed into your Docker Hub account. To create a Docker Hub account go to [https://hub.docker.com](https://hub.docker.com).
+* You need to have Docker CLI installed and you must be signed into your Docker Hub account. To create a Docker Hub account go to [https://hub.docker.com](https://hub.docker.com).
 
 ## Setup Application Insights
 * You will now setup Application Insights for consolidated logging (you could easily use ELK or Splunk for the same purpose). Go to the [Azure portal](http://portal.azure.com). Hit Create a resource -> DevOps -> Application Insights. Select the resource group to be azure-cafe-group. Specify the name as azure-cafe-insights. Hit Review + create. Hit Create.
