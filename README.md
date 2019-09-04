@@ -55,7 +55,7 @@ Once you are done exploring the demo, you should delete the azure-cafe-group-`<y
 
 ## To Do
 Integrate:
-* Active Directory
 * Redis
+* Active Directory
 * Key Vault/Configuration
 * Service Bus
