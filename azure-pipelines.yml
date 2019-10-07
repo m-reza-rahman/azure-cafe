@@ -21,7 +21,7 @@ steps:
     repository: 'rezarahman/azure-cafe'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
-    tags: 'v2'
+    tags: 'v3'
 - task: Kubernetes@1
   continueOnError: true
   inputs:
