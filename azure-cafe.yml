@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: azure-cafe
-        image: rezarahman/azure-cafe:v2
+        image: rezarahman/azure-cafe:v3
         env:
         - name: APPLICATION_INSIGHTS_KEY
           valueFrom:
