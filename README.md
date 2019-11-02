@@ -57,7 +57,7 @@ Once you are done exploring the demo, you should delete the azure-cafe-group-`<y
 Integrate:
 * MicroProfile Metrics/Prometheus
 * MicroProfile Health Check/Kubernetes
-* Redis
 * Active Directory
+* Redis
 * Key Vault/Configuration
 * Service Bus
