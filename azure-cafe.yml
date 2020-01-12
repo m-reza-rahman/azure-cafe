@@ -14,6 +14,22 @@ spec:
       containers:
       - name: azure-cafe
         image: rezarahman/azure-cafe:v3
+        livenessProbe:
+          httpGet:
+            path: "/health"
+            port: 9990
+            scheme: "HTTP"
+          initialDelaySeconds: 0
+          periodSeconds: 30
+          timeoutSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: "/health"
+            port: 9990
+            scheme: "HTTP"
+          initialDelaySeconds: 0
+          periodSeconds: 30
+          timeoutSeconds: 10
         env:
         - name: APPLICATION_INSIGHTS_KEY
           valueFrom:
@@ -28,7 +44,11 @@ metadata:
 spec:
   type: LoadBalancer
   ports:
-    - port: 80
+    - name: server
+      port: 80
       targetPort: 8080
+    - name: management
+      port: 9990
+      targetPort: 9990
   selector:
     app: azure-cafe

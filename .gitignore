@@ -26,3 +26,8 @@ hs_err_pid*
 .project
 /.settings/
 /.metadata/
+
+
+#intellij
+.idea/*
+*.iml
