@@ -13,10 +13,10 @@ spec:
     spec:
       containers:
       - name: azure-cafe
-        image: rezarahman/azure-cafe:v3
+        image: smmansoor/azure-cafe:0.1-SNAPSHOT
         livenessProbe:
           httpGet:
-            path: "/health"
+            path: "/health/live"
             port: 9990
             scheme: "HTTP"
           initialDelaySeconds: 0
@@ -24,7 +24,7 @@ spec:
           timeoutSeconds: 10
         readinessProbe:
           httpGet:
-            path: "/health"
+            path: "/health/ready"
             port: 9990
             scheme: "HTTP"
           initialDelaySeconds: 0
@@ -42,10 +42,10 @@ kind: Service
 metadata:
   name: azure-cafe
 spec:
-  type: LoadBalancer
+  type: NodePort
   ports:
     - name: server
-      port: 80
+      port: 8080
       targetPort: 8080
     - name: management
       port: 9990
