@@ -40,7 +40,7 @@ Once you are done exploring the demo, you should delete the azure-cafe-group-`<y
 * Go to [Azure DevOps home](https://dev.azure.com).
 * Select your project. Click on project settings -> Pipelines -> Service connections -> Create service connection -> GitHub. Select Azure Pipelines as the OAuth configuration. Click authorize. Provide a connection name. Click save.
 * Select New service connection -> Docker Registry. Select Docker Hub as your registry type. Fill in your Docker ID, password and email. Specify the connection name to be docker-hub-`<Your Docker Hub ID>`. Click save. 
-* Select New service connection -> Kubernetes. Select Azure subscription as your authentication. Specify the connection name to be azure-cafe-cluster. Select the cluster to be azure-cafe-cluster-`<your suffix>`. Click OK.
+* Select New service connection -> Kubernetes. Select Azure subscription as your authentication. Select the cluster to be azure-cafe-cluster-`<your suffix>` and the namespace to be default. Specify the connection name to be azure-cafe-cluster. Click save.
 
 ## Create and Run the Pipeline
 * Select pipelines. Click new -> new build pipeline. Select GitHub as source control. Select azure-cafe from your own repository. Select existing Azure Pipelines YAML file. Select azure-pipelines.yml as the path.
