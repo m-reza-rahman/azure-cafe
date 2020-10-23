@@ -43,7 +43,7 @@ Once you are done exploring the demo, you should delete the azure-cafe-group-`<y
 * Select New service connection -> Kubernetes. Select Azure subscription as your authentication. Select the cluster to be azure-cafe-cluster-`<your suffix>` and the namespace to be default. Specify the connection name to be azure-cafe-cluster. Click save.
 
 ## Create and Run the Pipeline
-* Select pipelines. Click create pipeline. Select GitHub as source control. Select azure-cafe from your own repository. Select existing Azure Pipelines YAML file. Select azure-pipelines.yml as the path.
+* Select pipelines. Click create pipeline. Select GitHub as source control. Select azure-cafe from your own repository. Select existing Azure Pipelines YAML file. Select azure-pipelines.yml as the path (in most cases this will be detected automatically).
 
 * In the YAML file, replace occurrences of `rezarahman` with `<Your Docker Hub ID>`. Replace occurrences of `<Your Application Insights key>` with the instrumentation key you noted earlier. When done, hit save and run.
 * When the job finishes running, the application will be deployed to Kubernetes. Grant the job access to resources if needed.
