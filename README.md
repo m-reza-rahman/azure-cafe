@@ -58,3 +58,4 @@ Integrate:
 * Active Directory
 * Redis
 * Service Bus
+* Liveness, readyness
