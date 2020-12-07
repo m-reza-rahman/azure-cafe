@@ -55,7 +55,8 @@ Once you are done exploring the demo, you should delete the azure-cafe-group-`<y
 
 ## To Do
 Integrate:
+* VS Code
 * Active Directory
-* Redis
-* Service Bus
+* Redis (as JPA second level cache)
 * Kubernetes liveness, readyness
+* Service Bus
