@@ -19,7 +19,7 @@ spec:
         image: rezarahman/azure-cafe:v3
         ports:
         - containerPort: 8080
-        - managementPort: 9990
+        - containerPort: 9990
         readinessProbe:
           httpGet:
             path: /health/ready
