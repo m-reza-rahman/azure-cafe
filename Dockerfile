@@ -1,4 +1,4 @@
-FROM jboss/wildfly
+FROM jboss/wildfly:20.0.1.Final
 
 RUN mkdir -p /opt/jboss/wildfly/modules/org/postgresql/main
 COPY server/postgresql-42.2.4.jar /opt/jboss/wildfly/modules/org/postgresql/main/
