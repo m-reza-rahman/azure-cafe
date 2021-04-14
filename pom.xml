@@ -7,7 +7,7 @@
 	<groupId>azure-cafe</groupId>
 	<version>0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>${project.artifactId}</name>
+	<name>azure-cafe</name>
 	<description>This is the basic Java EE application used throughout the Azure demo.
         It is a simple CRUD application. It uses Maven and Java EE 8 (JAX-RS, EJB, CDI, JPA, JSON-B, JSF, Bean Validation).
     </description>
@@ -22,6 +22,13 @@
 			<version>${javaee.api.version}</version>
 			<scope>provided</scope>
 		</dependency>
+		<!-- Required by Java SE 9+ -->
+        <dependency>
+            <groupId>org.glassfish.jaxb</groupId>
+            <artifactId>jaxb-runtime</artifactId>
+            <version>2.3.3</version>
+            <scope>provided</scope>
+        </dependency>
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-core</artifactId>
@@ -44,7 +51,7 @@
 		</dependency>
 	</dependencies>
 	<build>
-		<finalName>${project.artifactId}</finalName>
+		<finalName>azure-cafe</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

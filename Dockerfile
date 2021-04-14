@@ -1,7 +1,7 @@
 FROM jboss/wildfly:21.0.2.Final
 
 RUN mkdir -p /opt/jboss/wildfly/modules/org/postgresql/main
-COPY server/postgresql-42.2.4.jar /opt/jboss/wildfly/modules/org/postgresql/main/
+COPY server/postgresql-42.2.19.jar /opt/jboss/wildfly/modules/org/postgresql/main/
 COPY server/module.xml /opt/jboss/wildfly/modules/org/postgresql/main/
 COPY server/standalone.xml /opt/jboss/wildfly/standalone/configuration/
 ADD target/azure-cafe.war /opt/jboss/wildfly/standalone/deployments/
