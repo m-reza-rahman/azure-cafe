@@ -55,6 +55,13 @@ We can now set up the Azure Kubernetes Service (AKS) and deploy the application 
   If you get an error about an already existing resource, you may need to delete the ~/.kube directory.
 * You need to have Docker CLI installed and you must be signed into your Docker Hub account. To create a Docker Hub account go to [https://hub.docker.com](https://hub.docker.com).
 
+## Set Up GitHub Actions
+* Open a command line.
+ 
+   ```
+   cat $HOME/.kube/config | base64
+   ```   
+
 ## Create Service Connections
 * Clone this repository into your own GitHub account. Make sure to update the [azure-cafe.yml](azure-cafe.yml) file to replace occurrences of `rezarahman` with `<Your Docker Hub ID>` on GitHub. Make sure to also update the [standalone.xml](server/standalone.xml) file in the server/ directory to replace occurrences of `reza` with `<your suffix>`. 
 * Go to [Azure DevOps home](https://dev.azure.com).
