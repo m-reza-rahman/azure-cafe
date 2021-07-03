@@ -62,7 +62,7 @@ We can now set up the Azure Kubernetes Service (AKS) and deploy the application 
    cat $HOME/.kube/config | base64
    ```
 * Clone this repository into your own GitHub account. Make sure to update the [azure-cafe.yml](azure-cafe.yml) file to replace occurrences of `rezarahman` with `<Your Docker Hub ID>` on GitHub. Make sure to also update the [standalone.xml](server/standalone.xml) file in the server/ directory to replace occurrences of `reza` with `<your suffix>`.
-* Go to Settings -> Secrets on your GitHub repository. Click 'New repository secret'.  
+* Go to Settings -> Secrets on your GitHub repository. Click 'New repository secret'. Specify the secret name to be 'KUBE_CONFIG'. The Value will be the Base64 encoded .kube/config output from earlier.   
 
 ## Create Service Connections
 * Clone this repository into your own GitHub account. Make sure to update the [azure-cafe.yml](azure-cafe.yml) file to replace occurrences of `rezarahman` with `<Your Docker Hub ID>` on GitHub. Make sure to also update the [standalone.xml](server/standalone.xml) file in the server/ directory to replace occurrences of `reza` with `<your suffix>`. 
