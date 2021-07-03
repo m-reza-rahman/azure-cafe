@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: azure-cafe
-        image: rezarahman/azure-cafe:v3
+        image: rezarahman/azure-cafe:v1
         ports:
         - containerPort: 8080
         - containerPort: 9990
