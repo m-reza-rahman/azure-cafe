@@ -55,7 +55,7 @@ We can now set up the Azure Kubernetes Service (AKS) and deploy the application 
   If you get an error about an already existing resource, you may need to delete the ~/.kube directory.
 * You need to have Docker CLI installed and you must be signed into your Docker Hub account. To create a Docker Hub account go to [https://hub.docker.com](https://hub.docker.com).
 
-## Set Up GitHub Actions
+## Run GitHub Actions Pipeline
 * Open a command line and execute the following command. Please save off the output for use shortly.
  
    ```
