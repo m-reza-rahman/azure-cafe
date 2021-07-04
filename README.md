@@ -71,20 +71,9 @@ We can now set up the Azure Kubernetes Service (AKS) and deploy the application 
 * Click 'New repository secret'. Specify the secret name to be 'DOCKERHUB_PASSWORD'. The Value will be your Docker Hub password.
 * Click 'New repository secret'. Specify the secret name to be 'APPLICATION_INSIGHTS_KEY'. The Value will be the instrumentation key you noted earlier.
 * Go to Actions -> Workflows -> All workflows -> Main Build -> Run workflow -> Run workflow.
-
-## Create Service Connections
-* Clone this repository into your own GitHub account. Make sure to update the [azure-cafe.yml](azure-cafe.yml) file to replace occurrences of `rezarahman` with `<Your Docker Hub ID>` on GitHub. Make sure to also update the [standalone.xml](server/standalone.xml) file in the server/ directory to replace occurrences of `reza` with `<your suffix>`. 
-* Go to [Azure DevOps home](https://dev.azure.com).
-* Select your project. Click on project settings -> Pipelines -> Service connections -> Create service connection -> GitHub. Select Azure Pipelines as the OAuth configuration. Click authorize. Provide a connection name. Click save.
-* Select New service connection -> Docker Registry. Select Docker Hub as your registry type. Fill in your Docker ID, password and email. Specify the connection name to be docker-hub-`<Your Docker Hub ID>`. Click save.
-* Select New service connection -> Kubernetes. Select Azure subscription as your authentication. Select the cluster to be azure-cafe-cluster-`<your suffix>` and the namespace to be default. Specify the connection name to be azure-cafe-cluster. Click save.
-
-## Create and Run the Pipeline
-* Select pipelines. Click create pipeline. Select GitHub as source control. Select azure-cafe from your own repository. Select existing Azure Pipelines YAML file and select azure-pipelines.yml as the path if needed (in most cases this will be detected automatically).
-
-* In the YAML file, replace occurrences of `rezarahman` with `<Your Docker Hub ID>`. Replace occurrences of `<Your Application Insights key>` with the instrumentation key you noted earlier. When done, hit save and run.
-* When the job finishes running, the application will be deployed to Kubernetes. Grant the job access to resources if needed.
+* When the job finishes running, the application will be deployed to Kubernetes.
 * Get the External IP address of the Service, then the application will be accessible at `http://<External IP Address>/azure-cafe`:
+
    ```
    kubectl get svc azure-cafe --watch
    ```
@@ -92,6 +81,6 @@ We can now set up the Azure Kubernetes Service (AKS) and deploy the application 
 
 ## To Do
 Integrate:
-* Azure Active Directory (via LDAP or OpenID Connect)
 * Azure Redis (as JPA second level cache)
+* Azure Active Directory (via LDAP or OpenID Connect)
 * Service Bus (via JMS)
