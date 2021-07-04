@@ -46,12 +46,16 @@ We can now set up the Azure Kubernetes Service (AKS) and deploy the application 
 ## Setup Kubernetes Tooling
 * You will now need to setup kubectl. [Here](https://kubernetes.io/docs/tasks/tools/install-kubectl/) are instructions on how to do that.
 * Next you will install the Azure CLI. [Here](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest) are instructions on how to do that.
+* Please delete the ~/.kube directory for good measure:
+
+   ```
+   rm ~/.kube
+   ```
 * You will then connect kubectl to the Kubernetes cluster you created. To do so, run the following command:
 
    ```
    az aks get-credentials --resource-group azure-cafe-group-<your suffix> --name azure-cafe-cluster-<your suffix>
    ```
-  If you get an error about an already existing resource, you may need to delete the ~/.kube directory.
 * You need to have Docker CLI installed and you must be signed into your Docker Hub account. To create a Docker Hub account go to [https://hub.docker.com](https://hub.docker.com).
 
 ## Run GitHub Actions Pipeline
