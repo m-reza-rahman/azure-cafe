@@ -1,5 +1,5 @@
 # Azure Cafe
-This is an end-to-end Azure demo using a Java/Jakarta EE application and various representative Azure services such as managed PostgreSQL, AKS (Azure Kubernetes Service), Azure DevOps Pipelines and Application Insights. The following is how you run the demo.
+This is an end-to-end Azure demo using a Java/Jakarta EE application and various representative Azure services such as managed PostgreSQL, AKS (Azure Kubernetes Service), GitHub Actions, and Application Insights. The following is how you run the demo.
 
 ## Setup
 * Install JDK 11 (we used [AdoptOpenJDK OpenJDK 11 LTS/OpenJ9](https://adoptopenjdk.net)).
