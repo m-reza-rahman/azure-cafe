@@ -24,6 +24,9 @@ Once you are done exploring the demo, you should delete the azure-cafe-group-`<y
 * In the portal, go to 'All resources'. Find and click on azure-cafe-insights-`<your suffix>`. In the overview panel, note down the instrumentation key.
 * You will need to set up an environment variable in your local system named `APPLICATION_INSIGHTS_KEY` and set the value to the instrumentation key. When the application is run locally, it will use this environment variable.
 
+## Start Azure Cache for Redis
+* You will now setup Azure Cache for Redis to serve as the JPA second level cache (you could easily use Ehcache or Infinispan for the same purpose). Go to the [Azure portal](http://portal.azure.com). Hit Create a resource -> Databases -> Azure Cache for Redis. Select the resource group to be azure-cafe-group-`<your suffix>`. Specify the DNS name to be azure-cafe-cache-`<your suffix>` (the suffix could be your first name such as "reza"). Hit Review + create. Hit Create.
+
 ## Running the Application
 The next step is to get the application up and running. Follow the steps below to do so. We use VS Code but you can use any Maven capable IDE such as Eclipse or IntelliJ.
 
