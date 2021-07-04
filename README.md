@@ -65,7 +65,8 @@ We can now set up the Azure Kubernetes Service (AKS) and deploy the application 
 * Go to Settings -> Secrets on your GitHub repository. 
 * Click 'New repository secret'. Specify the secret name to be 'KUBE_CONFIG'. The Value will be the Base64 encoded .kube/config output from earlier.
 * Click 'New repository secret'. Specify the secret name to be 'DOCKERHUB_USERNAME'. The Value will be your Docker Hub username.
-* Click 'New repository secret'. Specify the secret name to be 'DOCKERHUB_PASSWORD'. The Value will be your Docker Hub password.  
+* Click 'New repository secret'. Specify the secret name to be 'DOCKERHUB_PASSWORD'. The Value will be your Docker Hub password.
+* Click 'New repository secret'. Specify the secret name to be 'APPLICATION_INSIGHTS_KEY'. The Value will be the instrumentation key you noted earlier.
 
 ## Create Service Connections
 * Clone this repository into your own GitHub account. Make sure to update the [azure-cafe.yml](azure-cafe.yml) file to replace occurrences of `rezarahman` with `<Your Docker Hub ID>` on GitHub. Make sure to also update the [standalone.xml](server/standalone.xml) file in the server/ directory to replace occurrences of `reza` with `<your suffix>`. 
