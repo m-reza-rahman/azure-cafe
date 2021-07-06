@@ -1,5 +1,6 @@
 package cafe.web.view;
 
+import java.io.IOException;
 import java.io.Serializable;
 import java.lang.invoke.MethodHandles;
 import java.net.InetAddress;
@@ -7,7 +8,7 @@ import java.net.UnknownHostException;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
-import javax.enterprise.context.SessionScoped;
+import javax.enterprise.context.RequestScoped;
 import javax.faces.context.FacesContext;
 import javax.inject.Named;
 import javax.servlet.http.HttpServletRequest;
@@ -26,7 +27,7 @@ import org.slf4j.LoggerFactory;
 import cafe.model.entity.Coffee;
 
 @Named
-@SessionScoped
+@RequestScoped
 public class Cafe implements Serializable {
 
 	private static final long serialVersionUID = 1L;

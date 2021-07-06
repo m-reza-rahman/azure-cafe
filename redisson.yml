@@ -1,0 +1,3 @@
+singleServerConfig:
+  password: "BaWwZY3OOeRZ1sbrd6TaZIUVY6qrlRCJm7IOekOIOCI="
+  address: "redis://azure-cafe-cache-reza.redis.cache.windows.net:6379"

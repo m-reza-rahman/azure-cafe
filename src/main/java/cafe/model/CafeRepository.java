@@ -23,7 +23,8 @@ public class CafeRepository {
 	public List<Coffee> getAllCoffees() {
 		logger.info("Finding all coffees. ");
 
-		return this.entityManager.createNamedQuery("findAllCoffees", Coffee.class).getResultList();
+		return this.entityManager.createNamedQuery("findAllCoffees", Coffee.class)
+				.setHint("org.hibernate.cacheable", "true").getResultList();
 	}
 
 	public Coffee persistCoffee(Coffee coffee) {

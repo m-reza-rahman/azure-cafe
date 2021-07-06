@@ -22,6 +22,12 @@
 			<version>${javaee.api.version}</version>
 			<scope>provided</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-annotations</artifactId>
+			<version>3.5.6-Final</version>
+			<scope>provided</scope>
+		</dependency>
 		<!-- Required by Java SE 9+ -->
         <dependency>
             <groupId>org.glassfish.jaxb</groupId>
@@ -49,6 +55,11 @@
 			<artifactId>applicationinsights-logging-logback</artifactId>
 			<version>2.3.1</version>
 		</dependency>
+		<dependency>
+			<groupId>org.redisson</groupId>
+			<artifactId>redisson-hibernate-53</artifactId>
+			<version>3.16.0</version>
+		</dependency>	
 	</dependencies>
 	<build>
 		<finalName>azure-cafe</finalName>

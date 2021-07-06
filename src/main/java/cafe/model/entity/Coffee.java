@@ -2,19 +2,24 @@ package cafe.model.entity;
 
 import java.io.Serializable;
 
+import javax.persistence.Cacheable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.NamedQuery;
 import javax.xml.bind.annotation.XmlRootElement;
 
+import org.hibernate.annotations.CacheConcurrencyStrategy;
+
 @XmlRootElement
 @Entity
+@Cacheable
+@org.hibernate.annotations.Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 @NamedQuery(name = "findAllCoffees", query = "SELECT o FROM Coffee o")
 public class Coffee implements Serializable {
 
     private static final long serialVersionUID = 1L;
-    
+
     @Id
     @GeneratedValue
     private Long id;
@@ -74,6 +79,6 @@ public class Coffee implements Serializable {
 
     @Override
     public String toString() {
-        return "cafe.model.entity.Coffee[id=" + id + ", name=" +name + ", price=" + price+"]";
+        return "cafe.model.entity.Coffee[id=" + id + ", name=" + name + ", price=" + price + "]";
     }
 }
