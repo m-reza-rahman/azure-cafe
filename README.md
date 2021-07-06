@@ -26,7 +26,8 @@ Once you are done exploring the demo, you should delete the azure-cafe-group-`<y
 
 ## Start Azure Cache for Redis
 * You will now setup Azure Cache for Redis to serve as the JPA second level cache (you could easily use Ehcache or Infinispan for the same purpose). Go to the [Azure portal](http://portal.azure.com). Hit Create a resource -> Databases -> Azure Cache for Redis. Select the resource group to be azure-cafe-group-`<your suffix>`. Specify the DNS name to be azure-cafe-cache-`<your suffix>` (the suffix could be your first name such as "reza"). Hit Review + create. Hit Create.
-* * In the portal, go to 'All resources'. Find and click on azure-cafe-cache-`<your suffix>`. Open the Advanced settings panel. Disable SSL connection enforcement and hit Save.
+* In the portal, go to 'All resources'. Find and click on azure-cafe-cache-`<your suffix>`. Open the Advanced settings panel. Disable SSL connection enforcement and hit Save.
+* In the 'Access keys' panel, note down the primary access key.
 
 ## Running the Application
 The next step is to get the application up and running. Follow the steps below to do so. We use VS Code but you can use any Maven capable IDE such as Eclipse or IntelliJ.
