@@ -12,7 +12,7 @@
 			<property name="hibernate.cache.use_second_level_cache" value="true" />
 			<property name="hibernate.cache.use_query_cache" value="true" />
 			<property name="hibernate.cache.region.factory_class" value="org.redisson.hibernate.RedissonRegionFactory" />
-			<property name="hibernate.cache.redisson.config" value="/Users/rrahman/Documents/GitHub/azure-cafe/redisson.yml" />
+			<property name="hibernate.cache.redisson.config" value="/opt/jboss/wildfly/redisson/redisson.yml" />
 			<property name="hibernate.cache.redisson.fallback" value="true" />
 		</properties>
 	</persistence-unit>

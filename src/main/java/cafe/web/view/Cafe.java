@@ -1,6 +1,5 @@
 package cafe.web.view;
 
-import java.io.IOException;
 import java.io.Serializable;
 import java.lang.invoke.MethodHandles;
 import java.net.InetAddress;
