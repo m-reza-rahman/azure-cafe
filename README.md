@@ -64,7 +64,7 @@ We can now set up the Azure Kubernetes Service (AKS) and deploy the application 
    ```
 * You need to have Docker CLI installed and you must be signed into your Docker Hub account. To create a Docker Hub account go to [https://hub.docker.com](https://hub.docker.com).
 
-## Run GitHub Actions Pipeline
+## Run GitHub Actions Workflow
 * Open a command line and execute the following command. Please save off the output for use shortly.
  
    ```
