@@ -52,11 +52,7 @@ We can now set up the Azure Kubernetes Service (AKS) and deploy the application 
 ## Setup Kubernetes Tooling
 * You will now need to setup kubectl. [Here](https://kubernetes.io/docs/tasks/tools/install-kubectl/) are instructions on how to do that.
 * Next you will install the Azure CLI. [Here](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest) are instructions on how to do that.
-* Please delete the ~/.kube directory for good measure:
-
-   ```
-   rm ~/.kube
-   ```
+* Please delete the ~/.kube directory for good measure.
 * You will then connect kubectl to the Kubernetes cluster you created. To do so, run the following command:
 
    ```
@@ -65,11 +61,27 @@ We can now set up the Azure Kubernetes Service (AKS) and deploy the application 
 * You need to have Docker CLI installed and you must be signed into your Docker Hub account. To create a Docker Hub account go to [https://hub.docker.com](https://hub.docker.com).
 
 ## Run GitHub Actions Workflow
-* Open a command line and execute the following command. Please save off the output for use shortly.
+* Open a command line and execute the following command on Linux or Mac. Please save off the output for use shortly.
  
    ```
    cat $HOME/.kube/config | base64
    ```
+  
+* On Windows PowerShell, you will need to enter the following commands. In the output, save off the text between `-----BEGIN CERTIFICATE-----` and `-----END CERTIFICATE-----`. 
+
+   ```
+   certutil -encode $HOME\.kube\config kube_config.txt
+   type kube_config.txt
+   del kube_config.txt   
+   ```
+   
+* For the Windows Command Prompt, use the following.
+   ```   
+   certutil -encode %HOMEDRIVE%%HOMEPATH%\.kube\config kube_config.txt
+   type kube_config.txt
+   del kube_config.txt
+   ```
+  
 * Clone this repository into your own GitHub account. Make sure to update the [azure-cafe.yml](azure-cafe.yml) file to replace occurrences of `rezarahman` with `<Your Docker Hub ID>` on GitHub. Make sure to also update the [standalone.xml](server/standalone.xml) file in the server/ directory to replace occurrences of `reza` with `<your suffix>`. Lastly you will need to update the [redisson.yml](redisson.yml) file. Replace occurrences of `reza` with `<your suffix>` and replace `<your Redis access key>` with the access key value you noted earlier.
 * Go to Settings -> Secrets on your GitHub repository. 
 * Click 'New repository secret'. Specify the secret name to be 'KUBE_CONFIG'. The Value will be the Base64 encoded .kube/config output from earlier.
