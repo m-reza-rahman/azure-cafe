@@ -100,4 +100,3 @@ We can now set up the Azure Kubernetes Service (AKS) and deploy the application 
 ## To Do
 Integrate:
 * Azure Active Directory (via OpenID Connect)
-* Service Bus (via JMS)
