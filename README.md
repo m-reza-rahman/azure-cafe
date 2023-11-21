@@ -2,7 +2,7 @@
 This is an end-to-end Azure demo using a Java/Jakarta EE application and various representative Azure services such as managed PostgreSQL, AKS (Azure Kubernetes Service), GitHub Actions, Azure Redis, and Application Insights. The following is how you run the demo.
 
 ## Setup
-* Install JDK 11 (we used [Eclipse Temurin OpenJDK 11 LTS](https://adoptium.net/?variant=openjdk11)).
+* Install JDK 17 (we used [Eclipse Temurin OpenJDK 17 LTS](https://adoptium.net/?variant=openjdk17)).
 * Install VS Code for Java from [here](https://code.visualstudio.com/docs/languages/java). Make sure the Java Extension Pack is installed. Also make sure to install the Server Connector extension from Red Hat.
 * Download this repository somewhere in your file system (easiest way might be to download as a zip and extract).
 * You will need a GitHub account.
