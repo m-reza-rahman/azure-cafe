@@ -25,7 +25,9 @@ Once you are done exploring the demo, you should delete the azure-cafe-group-`<y
 * You will need to set up an environment variable in your local system named `APPLICATION_INSIGHTS_KEY` and set the value to the instrumentation key. When the application is run locally, it will use this environment variable.
 
 ## Start Azure Cache for Redis
-* You will now setup Azure Cache for Redis to serve as the JPA second level cache (you could easily use Ehcache or Infinispan for the same purpose). Go to the [Azure portal](http://portal.azure.com). Hit Create a resource -> Databases -> Azure Cache for Redis. Select the resource group to be azure-cafe-group-`<your suffix>`. Specify the DNS name to be azure-cafe-cache-`<your suffix>` (the suffix could be your first name such as "reza"). Hit Review + create. Hit Create.
+* You will now setup Azure Cache for Redis to serve as the JPA second level cache (you could easily use Ehcache or Infinispan for the same purpose).
+* Select 'Create a resource'. In the search box, enter and select 'Azure Cache for Redis'. Hit create.
+* Select the resource group to be azure-cafe-group-`<your suffix>`. Specify the DNS name to be azure-cafe-cache-`<your suffix>` (the suffix could be your first name such as "reza"). Hit Review + create. Hit Create.
 * In the portal, go to 'All resources'. Find and click on azure-cafe-cache-`<your suffix>`. Open the Advanced settings panel. Disable SSL connection enforcement and hit Save.
 * In the 'Access keys' panel, note down the primary access key.
 
