@@ -49,7 +49,13 @@ The next step is to get the application up and running. Follow the steps below t
 ## Setup the Kubernetes Cluster
 We can now set up the Azure Kubernetes Service (AKS) and deploy the application to it.
 
-* You will first need to create the Kubernetes cluster. Go to the [Azure portal](http://portal.azure.com). Hit Create a resource -> Containers -> Kubernetes Service. Select the resource group to be azure-cafe-group-`<your suffix>`. Specify the cluster name as azure-cafe-cluster-`<your suffix>` (the suffix could be your first name such as "reza"). Hit Review + create. Hit Create.
+* You will first need to create the Kubernetes cluster.
+* Go to the [Azure portal](http://portal.azure.com).
+* Hit Create a resource -> Containers -> Kubernetes Service.
+* Select the resource group to be azure-cafe-group-`<your suffix>`.
+* Specify the cluster name as azure-cafe-cluster-`<your suffix>` (the suffix could be your first name such as "reza").
+* Hit Review + create.
+* Hit Create.
 
 ## Setup Kubernetes Tooling
 * You will now need to setup kubectl. [Here](https://kubernetes.io/docs/tasks/tools/install-kubectl/) are instructions on how to do that.
