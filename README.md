@@ -96,7 +96,7 @@ We can now set up the Azure Kubernetes Service (AKS) and deploy the application 
    del kube_config.txt
    ```
   
-* Clone this repository into your own GitHub account. Make sure to update the [azure-cafe.yml](azure-cafe.yml) file to replace occurrences of `rezarahman` with `<Your Docker Hub ID>` on GitHub. Make sure to also update the [standalone.xml](server/standalone.xml) file in the server/ directory to replace occurrences of `reza` with `<your suffix>`. Lastly you will need to update the [redisson.yml](redisson.yml) file. Replace occurrences of `reza` with `<your suffix>` and replace `<your Redis access key>` with the access key value you noted earlier.
+* Clone this repository into your own GitHub account. Make sure to update the [azure-cafe.yml](azure-cafe.yml) file in the root directory and [standalone.xml](server/standalone.xml) file in the server/ directory to replace occurrences of `reza` with `<your suffix>`. You will also need to update the [redisson.yml](redisson.yml) file. Replace occurrences of `reza` with `<your suffix>` and replace `<your Redis access key>` with the access key value you noted earlier.
 * Go to Settings -> Secrets and variables -> Actions on your GitHub repository. 
 * Click 'New repository secret'. Specify the secret name to be 'KUBE_CONFIG'. The Value will be the Base64 encoded .kube/config output from earlier.
 * Click 'New repository secret'. Specify the secret name to be 'DOCKERHUB_USERNAME'. The Value will be your Docker Hub username.
