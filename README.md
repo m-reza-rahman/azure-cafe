@@ -61,6 +61,11 @@ We can now set up the Azure Kubernetes Service (AKS) and deploy the application 
 ## Setup Kubernetes Tooling
 * You will now need to setup kubectl. [Here](https://kubernetes.io/docs/tasks/tools/install-kubectl/) are instructions on how to do that.
 * Next you will install the Azure CLI. [Here](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest) are instructions on how to do that.
+* Make sure to log into Azure:
+
+   ```
+   az login
+   ``` 
 * Please delete the ~/.kube directory for good measure.
 * You will then connect kubectl to the Kubernetes cluster you created. To do so, run the following command:
 
