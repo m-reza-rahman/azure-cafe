@@ -99,9 +99,9 @@ We can now set up the Azure Kubernetes Service (AKS) and deploy the application 
 * Clone this repository into your own GitHub account. Make sure to update the [azure-cafe.yml](azure-cafe.yml) file in the root directory and [standalone.xml](server/standalone.xml) file in the server/ directory to replace occurrences of `reza` with `<your suffix>`. You will also need to update the [redisson.yml](redisson.yml) file. Replace occurrences of `reza` with `<your suffix>` and replace `<your Redis access key>` with the access key value you noted earlier.
 * Go to Settings -> Secrets and variables -> Actions on your GitHub repository. 
 * Click 'New repository secret'. Specify the secret name to be 'KUBE_CONFIG'. The Value will be the Base64 encoded .kube/config output from earlier.
-* Click 'New repository secret'. Specify the secret name to be 'REGISTRY_SERVER'. The Value will be your Docker Hub password.
-* Click 'New repository secret'. Specify the secret name to be 'REGISTRY_USERNAME'. The Value will be your Docker Hub username.
-* Click 'New repository secret'. Specify the secret name to be 'REGISTRY_PASSWORD'. The Value will be your Docker Hub password.
+* Click 'New repository secret'. Specify the secret name to be 'REGISTRY_SERVER'. The Value will be azurecaferegistry`<your suffix>`.azurecr.io.
+* Click 'New repository secret'. Specify the secret name to be 'REGISTRY_USERNAME'. The Value will be azurecaferegistry`<your suffix>`.
+* Click 'New repository secret'. Specify the secret name to be 'REGISTRY_PASSWORD'. The Value will be registry access password you noted down earlier.
 * Click 'New repository secret'. Specify the secret name to be 'APPLICATION_INSIGHTS_KEY'. The Value will be the instrumentation key you noted earlier.
 * Go to Actions -> Workflows -> All workflows -> Main Build -> Run workflow -> Run workflow.
 * When the job finishes running, the application will be deployed to Kubernetes.
@@ -113,5 +113,4 @@ We can now set up the Azure Kubernetes Service (AKS) and deploy the application 
   It may take a few minutes for the load balancer to be created. When the external IP changes over from *pending* to a valid IP, just hit Control-C to exit.
 
 ## To Do
-* Switch to Azure Container Registry
 * Integrate Azure Active Directory (via OpenID Connect)
