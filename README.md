@@ -86,11 +86,11 @@ We can now set up the Azure Kubernetes Service (AKS) and deploy the application 
    ```
    certutil -encode $HOME\.kube\config kube_config.txt
    type kube_config.txt
-   del kube_config.txt   
+   del kube_config.txt
    ```
    
 * For the Windows Command Prompt, use the following.
-   ```   
+   ```
    certutil -encode %HOMEDRIVE%%HOMEPATH%\.kube\config kube_config.txt
    type kube_config.txt
    del kube_config.txt
