@@ -73,7 +73,7 @@ We can now set up the Azure Kubernetes Service (AKS) and deploy the application 
    ```
    az aks get-credentials --resource-group azure-cafe-group-<your suffix> --name azure-cafe-cluster-<your suffix>
    ```
-* You need to have Docker CLI installed and you must be signed into your Docker Hub account. To create a Docker Hub account go to [https://hub.docker.com](https://hub.docker.com).
+* You need to have Docker CLI installed.
 
 ## Run GitHub Actions Workflow
 * Open a command line and execute the following command on Linux or Mac. Please save off the output for use shortly.
