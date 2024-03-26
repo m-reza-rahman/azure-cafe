@@ -7,7 +7,6 @@ This is an end-to-end Azure demo using a Java/Jakarta EE application and various
 * Download this repository somewhere in your file system (easiest way might be to download as a zip and extract).
 * You will need a GitHub account.
 * You will need an Azure subscription. If you don't have one, you can get one for free for one year [here](https://azure.microsoft.com/en-us/free).
-* You need to have a [Docker Hub](https://hub.docker.com) account.
 
 ## Start Managed PostgreSQL on Azure
 * Go to the [Azure portal](http://portal.azure.com).
