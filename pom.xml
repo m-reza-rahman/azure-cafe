@@ -1,25 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+
+    <groupId>azure-cafe</groupId>
 	<artifactId>azure-cafe</artifactId>
-	<groupId>azure-cafe</groupId>
 	<version>0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
+
 	<name>azure-cafe</name>
 	<description>This is the basic Java EE application used throughout the Azure demo.
-        It is a simple CRUD application. It uses Maven and Java EE 8 (JAX-RS, EJB, CDI, JPA, JSON-B, JSF, Bean Validation).
+        It is a simple CRUD application. It uses Maven and Java EE 8 (JAX-RS, EJB, CDI, 
+		JPA, JSON-B, JSF, Bean Validation).
     </description>
+
 	<properties>
-		<javaee.api.version>8.0</javaee.api.version>
+		<jakartaee-api.version>10.0.0</jakartaee-api.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
+
 	<dependencies>
 		<dependency>
-			<groupId>javax</groupId>
-			<artifactId>javaee-api</artifactId>
-			<version>${javaee.api.version}</version>
+			<groupId>jakarta.platform</groupId>
+			<artifactId>jakarta.jakartaee-api</artifactId>
+			<version>${jakartaee-api.version}</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
@@ -28,55 +33,49 @@
 			<version>3.5.6-Final</version>
 			<scope>provided</scope>
 		</dependency>
-		<!-- Required by Java SE 9+ -->
-        <dependency>
-            <groupId>org.glassfish.jaxb</groupId>
-            <artifactId>jaxb-runtime</artifactId>
-            <version>2.3.3</version>
-            <scope>provided</scope>
-        </dependency>
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-core</artifactId>
-			<version>1.2.13</version>
+			<version>1.5.3</version>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
-			<version>1.7.26</version>
+			<version>2.0.12</version>
 		</dependency>
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-classic</artifactId>
-			<version>1.2.13</version>
+			<version>1.5.3</version>
 		</dependency>
 		<dependency>
 			<groupId>com.microsoft.azure</groupId>
 			<artifactId>applicationinsights-logging-logback</artifactId>
-			<version>2.3.1</version>
+			<version>2.6.4</version>
 		</dependency>
 		<dependency>
 			<groupId>org.redisson</groupId>
 			<artifactId>redisson-hibernate-53</artifactId>
-			<version>3.16.0</version>
+			<version>3.27.2</version>
 		</dependency>	
 	</dependencies>
+
 	<build>
 		<finalName>azure-cafe</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.11.0</version>
+				<version>3.13.0</version>
 				<inherited>true</inherited>
 				<configuration>
 					<release>11</release>
 				</configuration>
 			</plugin>
-                        <plugin>
+            <plugin>
 				<artifactId>maven-resources-plugin</artifactId>
 				<version>3.3.1</version>
-			</plugin>			
+			</plugin>
 			<plugin>
 				<artifactId>maven-war-plugin</artifactId>
 				<version>3.4.0</version>

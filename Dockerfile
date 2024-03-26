@@ -1,7 +1,7 @@
-FROM jboss/wildfly:21.0.2.Final
+FROM quay.io/wildfly/wildfly:latest-jdk11
 
 RUN mkdir -p /opt/jboss/wildfly/modules/org/postgresql/main
-COPY server/postgresql-42.2.19.jar /opt/jboss/wildfly/modules/org/postgresql/main/
+COPY server/postgresql-42.7.3.jar /opt/jboss/wildfly/modules/org/postgresql/main/
 COPY server/module.xml /opt/jboss/wildfly/modules/org/postgresql/main/
 
 RUN mkdir -p /opt/jboss/wildfly/redisson

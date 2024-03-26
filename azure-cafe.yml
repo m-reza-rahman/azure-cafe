@@ -35,7 +35,7 @@ spec:
           initialDelaySeconds: 60
           periodSeconds: 10
           timeoutSeconds: 3
-          failureThreshold: 1        
+          failureThreshold: 1
         env:
         - name: APPLICATION_INSIGHTS_KEY
           valueFrom:
