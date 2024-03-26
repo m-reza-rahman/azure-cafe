@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-              
+
       - name: Delete Azure Cafe Deployment
         uses: actions-hub/kubectl@master
         env:
@@ -52,11 +52,12 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/azure-cafe:v1
-                      
+          tags: ${{ secrets.REGISTRY_SERVER }}/azure-cafe:v1
+          
       - name: Create Azure Cafe Deployment
         uses: actions-hub/kubectl@master
         env:
           KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}
         with:
           args: create -f azure-cafe.yml
+
