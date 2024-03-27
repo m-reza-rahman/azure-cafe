@@ -1,0 +1,4 @@
+{
+  "client-id" : <Application/Client ID>,
+  "provider-url" : "https://login.microsoftonline.com/<Tenant ID>/"
+}
