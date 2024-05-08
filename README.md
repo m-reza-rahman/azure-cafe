@@ -70,8 +70,8 @@ We can now set up the Azure Kubernetes Service (AKS) and deploy the application 
 
    ```
    az login
-   ``` 
-* Please delete the ~/.kube directory for good measure.
+   ```
+* Please delete the .kube directory (in your user home) for good measure.
 * You will then connect kubectl to the Kubernetes cluster you created. To do so, run the following command:
 
    ```
