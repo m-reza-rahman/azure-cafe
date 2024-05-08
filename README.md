@@ -40,7 +40,7 @@ The next step is to get the application up and running. Follow the steps below t
 * Start VS Code.
 * Go to View->Command Palette. Type and select "Servers:Create New Server". Elect to download the server. Select 'WildFly 30.0.0 Final' and install the server. When you are done, WildFly will be set up in VS Code.
 * Find out where VS Code has installed WildFly in your file system. In the Servers panel, right click to open "Edit Server" for WildFly. Note down the server home directory.
-* Browse to where WildFly is installed. Create the path modules/org/postgresql/main.
+* Browse to where WildFly is installed in your file system. Create the path modules/org/postgresql/main.
 * Browse to where you have this repository code in your file system. You will need to copy the module.xml and PostgreSQL driver to the newly created modules/org/postgresql/main path. Both of these files are located under /server directory. Also from the /server directory, copy the standalone.xml into standalone/configuration where WildFly is installed.
 * Open the standalone.xml file under standalone/configuration that you just copied. Replace occurrences of `reza` with `<your suffix>`.
 * Create the path /opt/jboss/wildfly/redisson on your file system. Browse to where you have this repository code in your file system. You will need to copy the redisson.yml file to the newly created /opt/jboss/wildfly/redisson path. Open the redisson.yml file under /opt/jboss/wildfly/redisson that you just copied. Replace occurrences of `reza` with `<your suffix>`. Replace `<your Redis access key>` with the access key value you noted earlier. 
