@@ -1,4 +1,4 @@
-FROM quay.io/wildfly/wildfly:latest-jdk11
+FROM quay.io/wildfly/wildfly:30.0.0.Final-jdk17
 
 RUN mkdir -p /opt/jboss/wildfly/modules/org/postgresql/main
 COPY server/postgresql-42.7.3.jar /opt/jboss/wildfly/modules/org/postgresql/main/
