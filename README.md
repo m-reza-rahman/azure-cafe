@@ -19,7 +19,8 @@ This is an end-to-end Azure demo using a Java/Jakarta EE application and various
 Once you are done exploring the demo, you should delete the azure-cafe-group-`<your suffix>` resource group. You can do this by going to the portal, going to resource groups, finding and clicking on azure-cafe-group-`<your suffix>` and hitting delete. This is especially important if you are not using a free subscription! If you do keep these resources around (for example to begin your own prototype), you should in the least use your own passwords and make the corresponding changes in the demo code.
 
 ## Setup Application Insights
-* You will now set up Application Insights for consolidated logging (you could easily use ELK or Splunk for the same purpose). Go to the portal home. Hit Create a resource -> DevOps -> Application Insights. Select the resource group to be azure-cafe-group-`<your suffix>`. Specify the name as azure-cafe-insights-`<your suffix>` (the suffix could be your first name such as "reza"). Hit Review + create. Hit Create.
+* You will now set up Application Insights for consolidated logging (you could easily use ELK or Splunk for the same purpose).
+* Go to the portal home. Hit Create a resource -> DevOps -> Application Insights. Select the resource group to be azure-cafe-group-`<your suffix>`. Specify the name as azure-cafe-insights-`<your suffix>` (the suffix could be your first name such as "reza"). Hit Review + create. Hit Create.
 * In the portal, go to 'All resources'. Find and click on azure-cafe-insights-`<your suffix>`. In the overview panel, note down the instrumentation key.
 * You will need to set up an environment variable in your local system named `APPLICATION_INSIGHTS_KEY` and set the value to the instrumentation key. When the application is run locally, it will use this environment variable.
 
