@@ -44,6 +44,7 @@ You now need to set up Entra ID to use OpenID Connect.
 * Add 'http://localhost:8080/azure-cafe' as the redirect URI. Click 'Configure'.
 * Go back to the 'Overview' page and click 'Add a certificate or secret'. Click 'New client secret'. Enter a description (such as "Azure Cafe Secret") and click 'Add'.
 * Note down the secret value.
+* Go back to the 'Overview' page and click on 'Endpoints'. Note down the 'OpenID Connect metadata document" URL except for the '/.well-known/openid-configuration' part.
 
 ## Running the Application
 The next step is to get the application up and running. Follow the steps below to do so. We use VS Code but you can use any Maven capable IDE such as Eclipse or IntelliJ.
