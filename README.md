@@ -132,4 +132,4 @@ We can now set up the Azure Kubernetes Service (AKS) and deploy the application 
   It may take a few minutes for the load balancer to be created. When the external IP changes over from *pending* to a valid IP, just hit Control-C to exit.
 
 ## To Do
-* Integrate Microsoft Entra ID (via OpenID Connect)
+* Integrate Microsoft Entra ID (via OpenID Connect) -- need to try enabling SSL in AKS.
