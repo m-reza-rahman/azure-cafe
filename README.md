@@ -42,7 +42,7 @@ You now need to set up Entra ID to use OpenID Connect.
 * To go Manage ->  App registrations -> New Registration. Enter the name as azure-cafe-application-`<your suffix>` (the suffix could be your first name such as "reza"). Click 'Register'.
 * Note down the client ID and tenant ID in the overview page.
 * Click 'Add a Redirect URI', then click 'Add a Platform'. Select Web.
-* Add 'http://localhost:8080/azure-cafe' as the redirect URI. Click 'Configure'.
+* Add 'http://localhost:8080/azure-cafe/' as the redirect URI. Click 'Configure'.
 * Go back to the 'Overview' page and click 'Add a certificate or secret'. Click 'New client secret'. Enter a description (such as "Azure Cafe Secret") and click 'Add'.
 * Note down the secret value.
 
