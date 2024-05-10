@@ -42,6 +42,7 @@ spec:
             configMapKeyRef:
               name: application-insights-key
               key: APPLICATION_INSIGHTS_KEY
+      imagePullPolicy: Always
 ---
 apiVersion: v1
 kind: Service
