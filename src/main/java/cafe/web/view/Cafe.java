@@ -31,8 +31,8 @@ public class Cafe implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	private static final Logger logger = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
-
-	private String baseUri;
+	private static final String BASE_URI = "http://localhost:8080/azure-cafe/rest/coffees";
+	
 	private transient Client client;
 
 	@NotNull
@@ -65,38 +65,30 @@ public class Cafe implements Serializable {
 	@PostConstruct
 	private void init() {
 		try {
-			InetAddress inetAddress = InetAddress.getByName(
-					((HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest())
-							.getServerName());
-
-			baseUri = FacesContext.getCurrentInstance().getExternalContext().getRequestScheme() + "://"
-					+ inetAddress.getHostName() + ":"
-					+ FacesContext.getCurrentInstance().getExternalContext().getRequestServerPort()
-					+ "/azure-cafe/rest/coffees";
 			this.client = ClientBuilder.newClient();
 			this.getAllCoffees();
-		} catch (IllegalArgumentException | NullPointerException | WebApplicationException | UnknownHostException ex) {
+		} catch (IllegalArgumentException | NullPointerException | WebApplicationException ex) {
 			logger.error("Processing of HTTP response failed.");
 			ex.printStackTrace();
 		}
 	}
 
 	private void getAllCoffees() {
-		this.coffeeList = this.client.target(this.baseUri).path("/").request(MediaType.APPLICATION_JSON)
+		this.coffeeList = this.client.target(BASE_URI).path("/").request(MediaType.APPLICATION_JSON)
 				.get(new GenericType<List<Coffee>>() {
 				});
 	}
 
 	public void addCoffee() {
 		Coffee coffee = new Coffee(this.name, this.price);
-		this.client.target(baseUri).request(MediaType.APPLICATION_JSON).post(Entity.json(coffee));
+		this.client.target(BASE_URI).request(MediaType.APPLICATION_JSON).post(Entity.json(coffee));
 		this.name = null;
 		this.price = null;
 		this.getAllCoffees();
 	}
 
 	public void removeCoffee(String coffeeId) {
-		this.client.target(baseUri).path(coffeeId).request().delete();
+		this.client.target(BASE_URI).path(coffeeId).request().delete();
 		this.getAllCoffees();
 	}
 }
