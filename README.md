@@ -34,7 +34,7 @@ You will now set up Azure Cache for Redis to serve as the JPA second level cache
 * In the portal, go to 'All resources'. Find and click on azure-cafe-cache-`<your suffix>`. Open the Settings -> Advanced settings panel. Disable SSL connection enforcement and hit Save.
 * In the Settings -> Authentication panel, note down the primary access key.
 
-## Enable OpenID Connnect with Entra ID.
+## Enable OpenID Connect with Entra ID.
 You now need to set up Entra ID to use OpenID Connect.
 
 * Go to the portal home.
