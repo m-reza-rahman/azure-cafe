@@ -1,4 +1,8 @@
 {
-  "client-id" : <Application/Client ID>,
-  "provider-url" : "https://login.microsoftonline.com/<Tenant ID>/"
+    "client-id" : "<<from azure>",
+    "provider-url" : "<<from azure>",
+    "ssl-required" : "EXTERNAL",
+    "credentials" : {
+        "secret" : "<<from azure>>"
+     }
 }
