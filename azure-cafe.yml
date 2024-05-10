@@ -20,6 +20,7 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
+        - containerPort: 8443        
         - containerPort: 9990
         readinessProbe:
           httpGet:
@@ -51,7 +52,11 @@ metadata:
 spec:
   type: LoadBalancer
   ports:
-    - port: 80
+    - name: http
+      port: 80
       targetPort: 8080
+    - name: https
+      port: 443
+      targetPort: 8443
   selector:
     app: azure-cafe
