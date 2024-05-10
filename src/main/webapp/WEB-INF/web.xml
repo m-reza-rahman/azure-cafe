@@ -34,6 +34,7 @@
         <welcome-file>index.xhtml</welcome-file>
     </welcome-file-list>
 
+    <!-- This is for OIDC Connect
     <security-constraint>
         <web-resource-collection>
             <web-resource-name>secured</web-resource-name>
@@ -51,4 +52,6 @@
     <security-role>
         <role-name>*</role-name>
     </security-role>
+
+    -->
 </web-app>

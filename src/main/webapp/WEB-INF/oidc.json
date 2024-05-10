@@ -1,8 +1,8 @@
 {
-    "client-id" : "a46724bd-f086-45b0-b269-5e8964982982",
-    "provider-url" : "https://login.microsoftonline.com/b6181f11-2cd1-44b9-b190-133a9970d38b/v2.0",
+    "client-id" : "<Client ID>",
+    "provider-url" : "https://login.microsoftonline.com/<Tenant ID>/v2.0",
     "ssl-required" : "EXTERNAL",
     "credentials" : {
-        "secret" : "vW38Q~MYUhXC2P0f_8AJxPpZAnXuFL6gJq2gUa-6"
+        "secret" : "<Client secret>"
      }
 }
