@@ -34,6 +34,13 @@ You will now set up Azure Cache for Redis to serve as the JPA second level cache
 * In the portal, go to 'All resources'. Find and click on azure-cafe-cache-`<your suffix>`. Open the Settings -> Advanced settings panel. Disable SSL connection enforcement and hit Save.
 * In the Settings -> Authentication panel, note down the primary access key.
 
+## Enable OpenID Connnect with Entra ID.
+You now need to set up Entra ID to use OpenID Connect.
+
+* Go to the portal home.
+* Click on Microsoft Entra ID.
+* To go Manage ->  App registrations -> New Registration. Enter the name as azure-cafe-application-`<your suffix>` (the suffix could be your first name such as "reza"). Click Register.
+
 ## Running the Application
 The next step is to get the application up and running. Follow the steps below to do so. We use VS Code but you can use any Maven capable IDE such as Eclipse or IntelliJ.
 
