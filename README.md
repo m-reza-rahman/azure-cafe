@@ -42,7 +42,8 @@ You now need to set up Entra ID to use OpenID Connect.
 * To go Manage ->  App registrations -> New Registration. Enter the name as azure-cafe-application-`<your suffix>` (the suffix could be your first name such as "reza"). Click 'Register'.
 * Click 'Add a Redirect URI', then click 'Add a Platform'. Select Web.
 * Add 'http://localhost:8080/azure-cafe' as the redirect URI. Click 'Configure'.
-* Go back to the 'Overview' page and click 'Add a certificate or secret'. Click 'New client secret'.
+* Go back to the 'Overview' page and click 'Add a certificate or secret'. Click 'New client secret'. Enter a description (such as "Azure Cafe Secret") and click 'Add'.
+* Note down the secret value.
 
 ## Running the Application
 The next step is to get the application up and running. Follow the steps below to do so. We use VS Code but you can use any Maven capable IDE such as Eclipse or IntelliJ.
