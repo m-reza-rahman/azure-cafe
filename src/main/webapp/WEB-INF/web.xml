@@ -51,5 +51,4 @@
     <security-role>
         <role-name>*</role-name>
     </security-role>
-
 </web-app>
