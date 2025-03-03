@@ -33,8 +33,7 @@ You will now set up Azure Cache for Redis to serve as the JPA second level cache
 * Select the resource group to be azure-cafe-group-`<your suffix>`. Specify the DNS name to be azure-cafe-cache-`<your suffix>` (the suffix could be your first name such as "reza"). Click Next to go to the Networking tab. Enable a public endpoint. Click Next to go to the Advanced tab.
 * Disable Entra authentication, enable the non-TLS port, and enable access keys.
 * Hit Review + create. Hit Create.
-* In the portal, go to 'All resources'. Find and click on azure-cafe-cache-`<your suffix>`. Open the Settings -> Advanced settings panel. Disable SSL connection enforcement and hit Save.
-* In the Settings -> Authentication panel, note down the primary access key.
+* In the portal, go to 'All resources'. Find and click on azure-cafe-cache-`<your suffix>`. Open the Settings -> Authentication -> Access keys panel and note down the primary access key.
 
 ## Running the Application
 The next step is to get the application up and running. Follow the steps below to do so. We use VS Code but you can use any Maven capable IDE such as Eclipse or IntelliJ.
