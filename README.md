@@ -60,6 +60,7 @@ We can now set up the Azure Kubernetes Service (AKS) and deploy the application 
 * Specify the cluster name as azure-cafe-cluster-`<your suffix>` (the suffix could be your first name such as "reza").
 * Click next until you get to the 'Integrations' tab.
 * Create a new Azure Container Registry named azurecaferegistry`<your suffix>` (the suffix could be your first name such as "reza"). Make sure to enable the admin user.
+* Click Next to go to the Monitoring tab. Enable container logs.
 * Hit Review + create.
 * Hit Create. It will take some time for the cluster to deploy.
 * In the portal, go to 'All resources'. Find and click on azurecaferegistry`<your suffix>`. Open the Settings -> Access keys panel. Note down the password.
