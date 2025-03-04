@@ -10,9 +10,10 @@
 	<packaging>war</packaging>
 
 	<name>azure-cafe</name>
-	<description>This is the basic Java EE application used throughout the Azure demo.
-        It is a simple CRUD application. It uses Maven and Java EE 8 (JAX-RS, EJB, CDI, 
-		JPA, JSON-B, JSF, Bean Validation).
+	<description>
+	    This is the basic Jakarta EE application used throughout the Azure demo.
+        It is a simple CRUD application. It uses Maven and Jakarta EE 10 (REST,
+		Enterprise Beans, CDI, Persistence, JSON, Faces, Validation).
     </description>
 
 	<properties>
@@ -27,26 +28,26 @@
 			<version>${jakartaee-api.version}</version>
 			<scope>provided</scope>
 		</dependency>
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-annotations</artifactId>
-			<version>3.5.6-Final</version>
-			<scope>provided</scope>
-		</dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>6.6.9.Final</version>
+            <scope>provided</scope>
+        </dependency>
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-core</artifactId>
-			<version>1.5.13</version>
+			<version>1.5.17</version>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
-			<version>2.0.12</version>
+			<version>2.0.17</version>
 		</dependency>
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-classic</artifactId>
-			<version>1.5.3</version>
+			<version>1.5.17</version>
 		</dependency>
 		<dependency>
 			<groupId>com.microsoft.azure</groupId>
@@ -56,7 +57,7 @@
 		<dependency>
 			<groupId>org.redisson</groupId>
 			<artifactId>redisson-hibernate-53</artifactId>
-			<version>3.27.2</version>
+			<version>3.45.0</version>
 		</dependency>	
 	</dependencies>
 
@@ -66,7 +67,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.13.0</version>
+				<version>3.14.0</version>
 				<inherited>true</inherited>
 				<configuration>
 					<release>11</release>
@@ -79,9 +80,6 @@
 			<plugin>
 				<artifactId>maven-war-plugin</artifactId>
 				<version>3.4.0</version>
-				<configuration>
-					<failOnMissingWebXml>false</failOnMissingWebXml>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>
