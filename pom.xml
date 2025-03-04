@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-	     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
     <groupId>azure-cafe</groupId>
-	<artifactId>azure-cafe</artifactId>
-	<version>0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+    <artifactId>azure-cafe</artifactId>
+    <version>0.1-SNAPSHOT</version>
+    <packaging>war</packaging>
 
-	<name>azure-cafe</name>
-	<description>
-	    This is the basic Jakarta EE application used throughout the Azure demo.
+    <name>azure-cafe</name>
+    <description>
+        This is the basic Jakarta EE application used throughout the Azure demo.
         It is a simple CRUD application. It uses Maven and Jakarta EE 10 (REST,
-		Enterprise Beans, CDI, Persistence, JSON, Faces, Validation).
+	Enterprise Beans, CDI, Persistence, JSON, Faces, Validation).
     </description>
 
-	<properties>
-		<jakartaee-api.version>10.0.0</jakartaee-api.version>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
+    <properties>
+        <jakartaee-api.version>10.0.0</jakartaee-api.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 
-	<dependencies>
-		<dependency>
-			<groupId>jakarta.platform</groupId>
-			<artifactId>jakarta.jakartaee-api</artifactId>
-			<version>${jakartaee-api.version}</version>
-			<scope>provided</scope>
-		</dependency>
+    <dependencies>
+        <dependency>
+            <groupId>jakarta.platform</groupId>
+            <artifactId>jakarta.jakartaee-api</artifactId>
+            <version>${jakartaee-api.version}</version>
+            <scope>provided</scope>
+        </dependency>
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
@@ -40,28 +40,28 @@
             <version>3.45.0</version>
             <type>pom</type>
         </dependency>
-	</dependencies>
+    </dependencies>
 
-	<build>
-		<finalName>azure-cafe</finalName>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.14.0</version>
-				<inherited>true</inherited>
-				<configuration>
-					<release>11</release>
-				</configuration>
-			</plugin>
+    <build>
+        <finalName>azure-cafe</finalName>
+        <plugins>
             <plugin>
-				<artifactId>maven-resources-plugin</artifactId>
-				<version>3.3.1</version>
-			</plugin>
-			<plugin>
-				<artifactId>maven-war-plugin</artifactId>
-				<version>3.4.0</version>
-			</plugin>
-		</plugins>
-	</build>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.14.0</version>
+                <inherited>true</inherited>
+                <configuration>
+                    <release>11</release>
+                </configuration>
+	    </plugin>
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.3.1</version>
+	    </plugin>
+	    <plugin>
+	        <artifactId>maven-war-plugin</artifactId>
+	        <version>3.4.0</version>
+	    </plugin>
+	</plugins>
+    </build>
 </project>
