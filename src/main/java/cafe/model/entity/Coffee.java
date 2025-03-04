@@ -2,17 +2,18 @@ package cafe.model.entity;
 
 import java.io.Serializable;
 
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
+
 import jakarta.persistence.Cacheable;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.NamedQuery;
 
-import org.hibernate.annotations.CacheConcurrencyStrategy;
-
 @Entity
 @Cacheable
-@org.hibernate.annotations.Cache(usage = CacheConcurrencyStrategy.TRANSACTIONAL)
+@Cache(usage = CacheConcurrencyStrategy.TRANSACTIONAL)
 @NamedQuery(name = "findAllCoffees", query = "SELECT o FROM Coffee o")
 public class Coffee implements Serializable {
 
@@ -21,11 +22,10 @@ public class Coffee implements Serializable {
     @Id
     @GeneratedValue
     private Long id;
-    protected String name;
-    protected Double price;
+    private String name;
+    private Double price;
 
-    public Coffee() {
-    }
+    public Coffee() {}
 
     public Coffee(String name, Double price) {
         this.name = name;
