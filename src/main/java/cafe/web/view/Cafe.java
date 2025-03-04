@@ -2,6 +2,7 @@ package cafe.web.view;
 
 import java.io.Serializable;
 import java.lang.invoke.MethodHandles;
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -11,6 +12,7 @@ import jakarta.annotation.PostConstruct;
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Named;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PositiveOrZero;
 import jakarta.ws.rs.WebApplicationException;
 import jakarta.ws.rs.client.Client;
@@ -33,8 +35,9 @@ public class Cafe implements Serializable {
 
     @NotBlank
     private String name;
+    @NotNull
     @PositiveOrZero
-    private Double price;
+    private BigDecimal price;
     private transient List<Coffee> coffeeList;
 
     public String getName() {
@@ -45,12 +48,12 @@ public class Cafe implements Serializable {
         this.name = name;
     }
 
-    public Double getPrice() {
+    public Number getPrice() {
         return price;
     }
 
-    public void setPrice(Double price) {
-        this.price = price;
+    public void setPrice(Number price) {
+	this.price = new BigDecimal(price.toString());
     }
 
     public List<Coffee> getCoffeeList() {
@@ -74,7 +77,7 @@ public class Cafe implements Serializable {
     }
 
     public void addCoffee() {
-        Coffee coffee = new Coffee(this.name, this.price);
+        Coffee coffee = new Coffee(this.name, this.price.doubleValue());
         this.client.target(BASE_URI).request(MediaType.APPLICATION_JSON)
                 .post(Entity.json(coffee));
         this.name = null;

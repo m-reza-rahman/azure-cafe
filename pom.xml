@@ -34,11 +34,12 @@
             <version>6.6.9.Final</version>
             <scope>provided</scope>
         </dependency>
-		<dependency>
-			<groupId>org.redisson</groupId>
-			<artifactId>redisson-hibernate-53</artifactId>
-			<version>3.45.0</version>
-		</dependency>	
+        <dependency>
+            <groupId>org.redisson</groupId>
+            <artifactId>redisson-hibernate</artifactId>
+            <version>3.45.0</version>
+            <type>pom</type>
+        </dependency>
 	</dependencies>
 
 	<build>
